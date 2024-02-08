@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts",
-    "db:migrate": "bun ./src/db/migrate.ts",
+    "db:migrate": "bun run ./src/db/migrate.ts",
     "format": "bunx @biomejs/biome format ./src --write",
     "lint": "bunx @biomejs/biome lint ./src",
-    "start": "bun src/index.ts"
+    "start": "bun run src/index.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
