@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1707383703858,
+      "tag": "0000_short_guardsmen",
+      "breakpoints": true
+    }
+  ]
+}
