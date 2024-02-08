@@ -6,6 +6,7 @@
     "dev": "bun --watch src/index.ts",
     "db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts --out=./src/db/migrations",
     "db:migrate": "bun run ./src/db/migrate.ts",
+    "db:seed": "bun run ./src/db/seed.ts",
     "format": "bunx @biomejs/biome format ./src --write",
     "lint": "bunx @biomejs/biome lint ./src",
     "start": "bun run src/index.ts"
