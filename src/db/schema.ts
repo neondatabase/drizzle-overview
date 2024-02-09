@@ -17,6 +17,7 @@ export const posts = pgTable("posts", {
 		.notNull()
 		.references(() => users.id),
 	createdAt: timestamp("created_at").notNull().defaultNow(),
+	updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
 
 export const comments = pgTable("comments", {
@@ -24,6 +25,8 @@ export const comments = pgTable("comments", {
 	postId: integer("post_id").references(() => posts.id),
 	userId: integer("user_id").references(() => users.id),
 	text: text("text").notNull(),
+	createdAt: timestamp("created_at").notNull().defaultNow(),
+	updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
 
 export const postsRelations = relations(posts, ({ one, many }) => ({
