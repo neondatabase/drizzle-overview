@@ -1,12 +1,13 @@
 import { Hono } from "hono";
 
+const PORT = process.env.PORT || 3000;
+
 const app = new Hono();
 
 app.get("/", async (c) => {
 	try {
-		const data = [{}];
 		return c.json({
-			data,
+			data: [],
 		});
 	} catch (error) {
 		return c.json({ error });
@@ -14,6 +15,8 @@ app.get("/", async (c) => {
 });
 
 Bun.serve({
-	port: process.env.PORT || 3000,
+	port: PORT,
 	fetch: app.fetch,
 });
+
+console.log(`Server is running on port ${PORT}`);
