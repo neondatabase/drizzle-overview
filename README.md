@@ -37,5 +37,10 @@ Then you can run the following command to start the server:
 bun dev
 ```
 
-You can then visit [http://localhost:3000](http://localhost:3000) to see the app:
+You can then visit [http://localhost:3000](http://localhost:3000) to see the app.
+
+
+## Deployment
+
+This project is ready to be deployed to [Railway](https://railway.app), [Render](https://render.com) and[ Fly.io](https://fly.io).
 
